@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Chat Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <div class="light-them-logo">
+                <img src="assets/logo2.png" alt="Logo">
+            </div>
+            <div class="dark-them-logo">
+                <img src="assets/logo1.png" alt="Logo">
+            </div>
+
+        </div>
+        <button id="darkModeToggle">
+            <div class='moon'>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                        d="M152.62 126.77c0-33 4.85-66.35 17.23-94.77C87.54 67.83 32 151.89 32 247.38C32 375.85 136.15 480 264.62 480c95.49 0 179.55-55.54 215.38-137.85c-28.42 12.38-61.8 17.23-94.77 17.23c-128.47 0-232.61-104.14-232.61-232.61" />
+                </svg>
+            </div>
+            <div class='sun'>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M18 12a6 6 0 1 1-12 0a6 6 0 0 1 12 0" />
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M12 1.25a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0V2a.75.75 0 0 1 .75-.75M4.399 4.399a.75.75 0 0 1 1.06 0l.393.392a.75.75 0 0 1-1.06 1.061l-.393-.393a.75.75 0 0 1 0-1.06m15.202 0a.75.75 0 0 1 0 1.06l-.393.393a.75.75 0 0 1-1.06-1.06l.393-.393a.75.75 0 0 1 1.06 0M1.25 12a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1-.75-.75m19 0a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m-2.102 6.148a.75.75 0 0 1 1.06 0l.393.393a.75.75 0 1 1-1.06 1.06l-.393-.393a.75.75 0 0 1 0-1.06m-12.296 0a.75.75 0 0 1 0 1.06l-.393.393a.75.75 0 1 1-1.06-1.06l.392-.393a.75.75 0 0 1 1.061 0M12 20.25a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1a.75.75 0 0 1 .75-.75"
+                        clip-rule="evenodd" />
+                </svg>
+            </div>
+        </button>
+    </header>
+
+    <!-- Middle Section -->
+    <div class="container">
+        <!-- Left SideBar -->
+        <aside class="sidebar" id="sidebar">
+            <div>
+                <button id="toggleSidebar">
+                    <div class="close-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="32" d="M368 368L144 144m224 0L144 368" />
+                        </svg>
+                    </div>
+
+                </button>
+                <ul>
+                    <li>Home</li>
+                    <li>Contacts</li>
+                    <li>Settings</li>
+                </ul>
+            </div>
+            <div class="logOutBtn">
+                <button>Log Out</button>
+            </div>
+
+        </aside>
+
+        <!-- Chat Area -->
+        <main class="chat-area">
+            <div class="chat-header">
+                <div class="user">
+                    <div class="chat-header-img">
+                        <img src="assets/Charlie Green.png" alt="User Avatar" />
+                    </div>
+                    <h2>Charlie Green</h2>
+                </div>
+
+                <div class="menu-and-chat">
+                    <button id="toggleRightPanel" class="chat-btn">Chats</button>
+                    <div class="menu-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"
+                                d="M20 7H4m16 5H4m16 5H4" />
+                        </svg>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="chat-messages" id="chatMessages"></div>
+
+            <div class="chat-input">
+                <textarea id="messageInput" placeholder="Type your message..."></textarea>
+                <button id="sendBtn">Send</button>
+            </div>
+        </main>
+        <!-- Right Panel -->
+        <aside class="right-panel">
+            <div class="right-panel-header">
+                <p>All Chats</p>
+                <button id="closeRightPanel" class="close-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="32" d="M368 368L144 144m224 0L144 368" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="user-list">
+
+            </div>
+        </aside>
+    </div>
+
+    <footer class="footer">© 2025 ChatApp</footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
